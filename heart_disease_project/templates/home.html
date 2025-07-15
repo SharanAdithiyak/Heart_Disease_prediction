@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/unicons.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header>Heart Disease Prediction</header>
+        <form class ="form" action="/predict" method="post">
+
+                <div class="details personal">
+                    <span class="title">Personal Details:</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label >Full Name</label>
+                            <input type="text" placeholder="Enter your name" required>
+                        </div>
+                        <div class="input-field">
+                            <label >Date of Birth</label>
+                            <input type="date" placeholder="Enter your birthday" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label >Mobile Number</label>
+                            <input type="number" placeholder="Enter your number" required>
+                        </div>
+                        <div class="input-field">
+                            <label >Age</label>
+                            <input type="number" placeholder="Enter your age" name="feature1" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Gender</label>
+                            <span class="Gender">
+                            <select id="gender" name="feature2">
+                                <option value="1">Male</option>
+                                <option value="0">Female</option>
+                            </select>
+                        </span>
+                        </div>
+                        <div class="input-field">
+                            <label >E-mail</label>
+                            <input type="email" placeholder="Enter your e-mail" name="email" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="details ID">
+                    <span class="title">Patient Details:</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label >Chest Pain type</label>
+                            <input type="number" placeholder="Enter chest pain(0-3)" name="feature3" required>
+                        </div>
+                        <div class="input-field">
+                            <label >Resting Blood Pressure</label>
+                            <input type="number" placeholder="Enter Blood Pressure" name="feature4" required>
+                        </div>
+                        <div class="input-field">
+                            <label >Cholesterol Level </label>
+                            <input type="number" placeholder="Enter cholesterol level" name="feature5" required>
+                        </div>
+                        <div class="input-field">
+                            <label >Fasting Blood Sugar</label>
+                            <input type="number" placeholder="Enter blood Sugar" name="feature6" required>
+                        </div>
+                        <div class="input-field">
+                            <label >Resting Electro cardio graphic results</label>
+                            <input type="number" placeholder="Enter rest ecg(0-2)" name="feature7" required>
+                        </div>
+                        <div class="input-field">
+                            <label >Maximum Heart rate</label>
+                            <input type="number" placeholder="Enter Maximum Heart rate" name="feature8" required>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="details address">
+                    <span class="title">More Details:</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label >Exercise Induced Angina</label>
+                            <input type="number" placeholder="Enter exang " name="feature9" required>
+                        </div>
+                        <div class="input-field">
+                            <label >ST Depression</label>
+                            <input type="number" placeholder="enter oldpeak "  name="feature10" required>
+                        </div>
+                        <div class="input-field">
+                            <label >Slope of peak exercise ST segment</label>
+                            <input type="number" placeholder="enter slope ( 0-2 )" name="feature11" required>
+                        </div>
+                        <div class="input-field">
+                            <label >Number of major vessels</label>
+                            <input type="number" placeholder="Enter no of vessels(0-3)" name="feature12" required>
+                        </div>
+                        <div class="input-field">
+                            <label >Thalassemia Type </label>
+                            <input type="number" placeholder="Enter type(1-3)" name="feature13" required>
+                        </div>
+                        <div class="input-field">
+<!--                            <label >Blood Glucose Level</label>-->
+<!--                            <input type="number" placeholder="Enter Blood Glucose Level"  required>-->
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="buttons">
+
+                        <button class="nextBtn"  type="submit">
+                            <span class="submit">Submit</span>
+                            <i class="uil-uil-navigator"></i>
+                        </button>
+                    </div>
+
+
+        </form>
+    </div>
+
+</body>
+</html>
